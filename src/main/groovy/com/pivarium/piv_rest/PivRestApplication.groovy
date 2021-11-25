@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
 class PivRestApplication {
-
     static void main(String[] args) {
         SpringApplication.run(PivRestApplication, args)
     }
-
 }

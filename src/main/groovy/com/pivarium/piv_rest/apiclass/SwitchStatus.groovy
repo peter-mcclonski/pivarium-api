@@ -1,4 +1,4 @@
-package com.pivarium.piv_rest
+package com.pivarium.piv_rest.apiclass
 
 class SwitchStatus {
     final String id;
