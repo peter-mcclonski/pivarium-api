@@ -7,6 +7,7 @@ class Sensor {
     @Id
     String id
 
+    String ext
     String uuid
     String stationID
     String[] stype
@@ -17,6 +18,7 @@ class Sensor {
     Sensor() {
         this.uuid = UUID.randomUUID().toString().replace("-", "")
         this.frequency = 20
+        this.ext = "sensor"
     }
 
     String toString() {
