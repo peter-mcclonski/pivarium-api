@@ -35,7 +35,15 @@ class SensorController {
 
     @PutMapping("/sensor/status")
     Sensor sensorStatus(@RequestBody SensorReading status) {
-        readingRepo.save(status)
+        if (status.status instanceof Map) {
+            Map statMap = (Map)status.status
+            for (String k : statMap.keySet()) {
+                SensorReading subRead = new SensorReading(status.utime, status.sensor_id, k, statMap.get(k))
+                readingRepo.save(subRead)
+            }
+        } else {
+            readingRepo.save(status)
+        }
         return repository.findByUuid(status.sensor_id)
     }
 }

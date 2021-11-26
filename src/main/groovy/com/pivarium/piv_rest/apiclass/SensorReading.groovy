@@ -8,9 +8,17 @@ public class SensorReading {
     @Id
     String id
 
-    double utime
+    Double utime
     String sensor_id
-    Map status
+    Object status
+    Object stype
 
     SensorReading() {}
+
+    SensorReading(double utime, String sensor_id, status, stype) {
+        this.utime = utime
+        this.sensor_id = sensor_id
+        this.status = status
+        this.stype = stype
+    }
 }
