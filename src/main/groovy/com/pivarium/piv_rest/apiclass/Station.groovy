@@ -7,11 +7,15 @@ class Station {
     String id
 
     String uuid
+    String extensionPath
 
-    Station() {}
+    Station() {
+        this.uuid = UUID.randomUUID().toString().replace("-", "")
+    }
 
-    Station(String uuid) {
+    Station(String uuid, String extensionPath) {
         this.uuid = uuid
+        this.extensionPath = extensionPath
     }
 
     String toString() {

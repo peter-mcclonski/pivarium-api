@@ -9,14 +9,14 @@ class Sensor {
 
     String uuid
     String stationID
-    String stype
+    String[] stype
+    String connType
+    String hwAddress
+    int frequency
 
-    Sensor() {}
-
-    Sensor(String uuid, String stype, String stationID) {
-        this.uuid = uuid
-        this.stype = stype
-        this.stationID = stationID
+    Sensor() {
+        this.uuid = UUID.randomUUID().toString().replace("-", "")
+        this.frequency = 20
     }
 
     String toString() {
