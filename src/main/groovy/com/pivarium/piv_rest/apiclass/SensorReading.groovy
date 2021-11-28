@@ -15,7 +15,7 @@ public class SensorReading {
 
     SensorReading() {}
 
-    SensorReading(double utime, String sensor_id, status, stype) {
+    SensorReading(double utime, String sensor_id, stype, status) {
         this.utime = utime
         this.sensor_id = sensor_id
         this.status = status

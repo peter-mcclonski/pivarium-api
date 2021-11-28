@@ -13,11 +13,6 @@ class Station {
         this.uuid = UUID.randomUUID().toString().replace("-", "")
     }
 
-    Station(String uuid, String extensionPath) {
-        this.uuid = uuid
-        this.extensionPath = extensionPath
-    }
-
     String toString() {
         return String.format(
                 "Station[uuid=%s]", this.uuid
